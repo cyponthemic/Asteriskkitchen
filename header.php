@@ -52,7 +52,8 @@
 
 	<?php get_template_part('parts/off-canvas-menu'); ?>
 
-	<?php get_template_part('parts/top-bar'); ?>
+	
 
 <section class="container" role="document">
+	<?php get_template_part('parts/top-bar'); ?>
 	<?php do_action('foundationPress_after_header'); ?>
