@@ -51,7 +51,7 @@ img.alignright {
 
 // Add some whitespace between top bar and content
 .top-bar-container, .tab-bar {
-	margin-bottom: rem-calc(32);
+	/* margin-bottom: rem-calc(32); */
 }
 
 // Fix the issue where the WP adminbar overlaps the mobile menu
@@ -60,6 +60,7 @@ img.alignright {
 }
 
 
+/*
 // A more subtle background color for the active menu item
 .top-bar-section li.active:not(.has-form) a:not(.button)  {
 	background: #272727;
@@ -67,6 +68,7 @@ img.alignright {
 .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
 	background: #202020;
 }
+*/
 
 // Add some whitespace above the footer for medium-up screens
 @media #{$medium-up} {
@@ -95,3 +97,56 @@ img.alignright {
 
 		.download { margin-top: rem-calc(20); }
 	}
+
+.opacity-white{
+	background-color: $opacity-white;
+	@media #{$small-only}{
+		background-color: white;
+	}
+}
+.container{
+	@media #{$small-only}{
+		margin-top: 3*$gap;
+	}
+
+	@media #{$medium-up}{
+		margin-top: 2*$gap;
+		margin-left: 2*$gap;
+	}
+	@media #{$large-up}{
+		margin-top: 2*$gap;
+		margin-left: 0;
+	}
+}
+.center-elements {
+	text-align: center;
+	ul {
+		display: inline-block;
+		float: none !important;
+	}
+}
+
+.header-logo,
+.inner {
+	margin: $gap;
+	margin-bottom: $gap/2;
+}
+
+.separation-bar {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	margin-bottom:  $gap;
+	height: 50px;
+}
+.entry-title{
+	@media #{$small-only}{
+		font-size: rem-calc(24);
+	}
+	text-transform: uppercase;
+}
+footer.social-bar{
+	margin-top: 0;
+	.inner{
+	padding-bottom: 2*$gap
+	}
+}
