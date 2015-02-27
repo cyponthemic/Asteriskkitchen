@@ -104,9 +104,33 @@ img.alignright {
 		background-color: white;
 	}
 }
+.dropdown li.active:not(.has-form) a:not(.button) {
+background: rgba(255,255,255,1);
+}
+.dropdown li.active:not(.has-form):hover a:not(.button) {
+background: rgba(255,255,255,1);
+}
+
+@media #{$small-only}{
+	#supersized {
+		background: white;
+		a{
+			background: white !important;
+		}
+		img {
+		width: 100% !important;
+		height: auto !important;
+		position: relative;
+		outline: none;
+		border: none;
+		top:0 !important;
+		left: 0 !important;
+		}
+	}
+}
 .container{
 	@media #{$small-only}{
-		margin-top: 3*$gap;
+		margin-top: 0*$gap;
 	}
 
 	@media #{$medium-up}{
@@ -126,7 +150,34 @@ img.alignright {
 	}
 }
 
-.header-logo,
+.header-logo{
+	margin: $gap;
+}
+.tabbar-logo{
+	display: inline-block;
+	height: 100%;
+	width: auto;
+	padding: $gap;
+}
+.offcanvas-logo{
+width: 65%;
+padding: 25px;
+margin-left: 17.5%;
+}
+.left-off-canvas-menu * {
+-webkit-backface-visibility: hidden;
+list-style: none;
+}
+ul.off-canvas-list {
+list-style-type: none;
+padding: 25px;
+margin: 0;
+}
+.tab-bar-section.middle {
+left: 9.375rem;
+right: 9.375rem;
+width: 65% !important;
+}
 .inner {
 	margin: $gap;
 	margin-bottom: $gap/2;
@@ -141,12 +192,33 @@ img.alignright {
 .entry-title{
 	@media #{$small-only}{
 		font-size: rem-calc(24);
+		margin: $gap;
 	}
 	text-transform: uppercase;
 }
 footer.social-bar{
+	
 	margin-top: 0;
+	margin-bottom: $gap*2;
 	.inner{
-	padding-bottom: 2*$gap
+	padding-bottom: $gap
 	}
+	a{
+		color: black;
+		font-size: 24px;
+	}
+}
+
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+margin: 0 0 0 0;
+height: 2.3125rem;
+}
+
+.tab-bar .menu-icon span::after {
+
+top: 50.5%;
+
+left: 95px;
+
 }

@@ -41,11 +41,11 @@
 	
 	<nav class="tab-bar show-for-small-only">
 		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+			<a class="left-off-canvas-toggle menu-icon" href="#"><span>MENU</span></a>
 		</section>
-		<section class="middle tab-bar-section">
+		<section class="middle tab-bar-section center-elements">
 			
-			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
+			<img class="tabbar-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 
 		</section>
 	</nav>
