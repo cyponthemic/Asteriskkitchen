@@ -46,6 +46,7 @@
        
         direction: 'horizontal',
         speed:1000,
+        effect:'fade',
         autoplay:5000
     });
     </script>

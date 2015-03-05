@@ -9,6 +9,27 @@
         <section class="top-bar-section center-elements">
             <?php foundationPress_top_bar_l(); ?>
             <?php foundationPress_top_bar_r(); ?>
+            
+            <ul>
+            	<li class="social-topbar">
+	            	<a href="https://twitter.com/asteriskkitchen">
+						<i class="fa fa-twitter"></i>
+					</a> 
+            	</li>
+            	<li class="social-topbar">
+					<a target="_blank" href="http://www.facebook.com/AsteriskKitchen?fref=ts" >
+						
+						<i class="fa fa-facebook-official"></i>
+					</a>
+            	</li>
+            	<li class="social-topbar">
+					<a target="_blank" href="https://instagram.com/asteriskkitchen" >
+						
+						<i class="fa fa-instagram"></i>
+					</a>
+            	</li>
+
+            </ul> 
         </section>
        
     </nav>
