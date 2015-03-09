@@ -831,7 +831,9 @@ $tabbar-header-color: black;
 $off-canvas-width: rem-calc(250);
 $off-canvas-bg: white;
 $off-canvas-bg-hover: grey;
-
+.off-canvas-wrap,
+.inner-wrap{
+}
 // Off Canvas Menu List Variables
 // $off-canvas-label-padding: 0.3rem rem-calc(15);
 $off-canvas-label-color: black;

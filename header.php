@@ -40,10 +40,10 @@
 	<?php do_action('foundationPress_layout_start'); ?>
 	
 	<nav class="tab-bar show-for-small-only">
-		<section class="left-small">
-			<a class="left-off-canvas-toggle menu-icon" href="#"><span>MENU</span></a>
+		<section class="right-small">
+			<a class="right-off-canvas-toggle menu-icon" href="#"><span>MENU</span></a>
 		</section>
-		<section class="middle tab-bar-section center-elements">
+		<section class="left tab-bar-section center-elements">
 			
 			<img class="tabbar-logo" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 
