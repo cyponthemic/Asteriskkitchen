@@ -7,22 +7,7 @@
 	
 </footer>
 -->
-	<footer class="row social-bar">
-			<div id="social" class="large-7 medium-8 columns opacity-white">
-				<div class="inner">
-				<hr>
-				<a href="https://twitter.com/asteriskkitchen">
-					<i class="fa fa-twitter"></i>
-				</a> 
-			
-				<a href="http://www.facebook.com/AsteriskKitchen?fref=ts" >
-					
-					<i class="fa fa-facebook-official"></i>
-				</a> 
-				</		
-			</div>
-	</footer><!-- #colophon -->
-
+	
 </section>	
 
 <a class="exit-off-canvas"></a>
@@ -36,11 +21,12 @@
 
 <?php wp_footer(); ?>
 <?php do_action('foundationPress_before_closing_body'); ?>
-
+	<?php if(!is_product()): ?>
     <!-- Swiper JS -->
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/swiper.min.js"></script>
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/swiper.js"></script>
 
     <!-- Initialize Swiper -->
+    
     <script>
     var swiper = new Swiper('.swiper-container', {
        
@@ -50,5 +36,6 @@
         autoplay:5000
     });
     </script>
+    <?php endif; ?>
 </body>
 </html>

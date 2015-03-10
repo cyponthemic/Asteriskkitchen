@@ -3,9 +3,11 @@
 $small_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small-slider', false, '' );
 $medium_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium-slider', false, '' );
 $large_thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large-slider', false, '' );
-
-
-if (has_post_thumbnail()):
+if(is_woocommerce()):
+$small_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(296), 'small-slider', false, '' );
+$medium_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(296), 'medium-slider', false, '' );
+$large_thumb = wp_get_attachment_image_src( get_post_thumbnail_id(296), 'large-slider', false, '' );
+endif;
 
 ?>
 
@@ -19,9 +21,10 @@ if (has_post_thumbnail()):
 				echo '['.$large_thumb[0].',(large)] ';
 				echo '"></div>';
         	?>
-           
+          <?php if(!is_woocommerce()): ?> 
           <?php 
-          if( class_exists('Dynamic_Featured_Image') ) {
+          if( class_exists('Dynamic_Featured_Image')) {
+          		echo 'il ya des images';
 		       global $dynamic_featured_image;
 		       $featured_images = $dynamic_featured_image->get_featured_images( );
 			   foreach ($featured_images as $bkg):
@@ -36,7 +39,7 @@ if (has_post_thumbnail()):
 			   endforeach;
 			  
 			}
-			 endif;
+		  endif; 
 		  ?>
 
         </div>

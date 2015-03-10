@@ -3,7 +3,7 @@
 Author: Ole Fredrik Lie
 URL: http://olefredrik.com
 */
-
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 // Various clean up functions
 require_once('library/cleanup.php');
@@ -73,5 +73,5 @@ function baw_theme_setup() {
   add_image_size( 'medium-slider', 1025, 768 ); // 1025 pixels wide (and unlimited height)
   add_image_size( 'large-slider', 1441, 800 ); // 1441 pixels wide (and unlimited height)
 }
-
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'movie', 'product' ) );
 ?>
