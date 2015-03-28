@@ -1,0 +1,140 @@
+///CART MENU
+.menu-cart-container{
+	    display: inline-block;
+		position: absolute;
+		z-index: 9999999;
+		right: 70px;
+	
+	.menu{
+	list-style: none;
+	.amount{
+		font-size:14px;
+	}
+	}
+}
+
+.login-account{
+	  position: absolute;
+	  top: 50px;
+	  right: 50px;
+	   a {
+		  font-size: 10px;
+		  border: 1px solid grey;
+		  padding: 8px 15px;
+		  color: grey;
+		  border-radius: 7px;
+		}
+}
+//CAT PAGE FIX
+h1.category-title {
+  margin-bottom: 0px;
+}
+h1.category-title+.page-title{
+	margin-bottom: 10px;
+	.menu-cart-container{
+		position: static !important;
+	}
+}
+
+@media #{$small-only} { 
+.menu-cart-container{
+	display: block;
+	position: static;
+}
+}
+//CART PAGE
+
+table.shop_table.cart {
+  width: 100%;
+  span.amount {
+  font-size: 14px;
+  }
+  td.actions{
+	  text-align: right;
+	  .coupon{
+		    display: inline-block;
+			text-align: right;
+			label{
+				display: none;
+			}
+			input#coupon_code{
+				  display: inline-block;
+				  width: 150px;
+				  /* margin-left: 50px; */
+				  height: 50px;
+			}
+			input.button{
+				display: inline-block;
+			}
+			
+	  }
+	  
+  }
+}
+img.attachment-shop_thumbnail.wp-post-image {
+  width: auto;
+  height: 82px;
+}
+.cart_totals {
+	  text-align: right;
+	h2 {
+		font-size: 24px;
+		text-align: center;
+  		}
+  		table{
+	  		display: inline-block;
+  		}
+  		.wc-proceed-to-checkout{
+	  		  
+  		}
+}
+@media #{$small-only} { 
+	.product-remove,
+	.product-thumbnail{
+		display: none;
+	}
+	.woocommerce-cart .inner{
+		margin: 0;
+	}
+	td.product-name * {
+		font-size: 10px !important;
+  	}
+  	table.shop_table.cart td.actions,
+  	table.shop_table.cart td.actions .coupon {
+  text-align: center;
+  	}
+  	input#coupon_code {
+	  	margin-bottom: 17px;
+	  	text-align: center;
+	  	}
+}
+
+
+//CHECKOUT
+
+#order_review{
+	.woocommerce-checkout-review-order-table{
+		  width: 100%;
+		  strong.product-quantity{
+			  display: inline-block;
+		  }
+		  dl.variation{
+			    display: inline-block;
+				line-height: 1;
+				margin-bottom: 0;
+				dt.variation-Flavours{
+					  display: inline-block;
+					  margin-left: 25px;
+					  margin-bottom: 0;
+				}
+				dd.variation-Flavours{
+					  display: inline-block;
+					  line-height: 1;
+					  margin: 0px;
+					  p{
+						  margin: 0;
+					  }
+				}
+		  }
+	}
+}

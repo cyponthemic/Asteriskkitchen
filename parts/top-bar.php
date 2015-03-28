@@ -12,7 +12,7 @@
             
             <ul>
             	<li class="social-topbar">
-	            	<a href="https://twitter.com/asteriskkitchen">
+	            	<a  target="_blank" href="https://twitter.com/asteriskkitchen">
 						<i class="fa fa-twitter"></i>
 					</a> 
             	</li>

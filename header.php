@@ -56,7 +56,7 @@
 
 <section class="container" role="document">
 	<?php 
-	if (is_woocommerce()):
+	if (is_woocommerce() or is_cart() or is_account_page() or is_checkout()):
 	get_template_part('parts/top-bar-commerce');
 	else:
 	get_template_part('parts/top-bar'); 

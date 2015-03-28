@@ -111,6 +111,12 @@ background: rgba(255,255,255,1);
 background: rgba(255,255,255,1);
 }
 
+.minimumheight{
+	min-height: 400px;
+	margin-bottom: 50px;
+	padding-bottom: 50px;
+}
+
 @media #{$small-only}{
 	#supersized {
 		background: white;
@@ -239,3 +245,7 @@ li.social-topbar .fa:before {
   top: 2px;
   z-index: 1000;
   }
+  
+.type-page .entry-content {
+  padding-bottom: 50px;
+}

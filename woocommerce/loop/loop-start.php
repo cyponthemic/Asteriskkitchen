@@ -11,5 +11,5 @@
 <ul class="large-8 large-centered column center small-block-grid-1 medium-block-grid-2">
 <?php else: ?> 
 
-<ul class="small-block-grid-1 medium-block-grid-4">
+<ul class="large-8 large-offset-2 small-block-grid-1 medium-block-grid-4">
 <?php endif; ?> 

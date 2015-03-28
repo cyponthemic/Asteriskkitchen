@@ -74,4 +74,22 @@ function baw_theme_setup() {
   add_image_size( 'large-slider', 1441, 800 ); // 1441 pixels wide (and unlimited height)
 }
 add_theme_support( 'post-thumbnails', array( 'post', 'page', 'movie', 'product' ) );
+
+function woocommerce_category_image() {
+    if ( is_product_category() ){
+	    global $wp_query;
+	    $cat = $wp_query->get_queried_object();
+	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $image = wp_get_attachment_url( $thumbnail_id );
+	    if ( $image ) {
+		    echo '<img class="cat-thumbnail" src="' . $image . '" alt="" />';
+		}
+	}
+}
+
+function register_my_menu() {
+  register_nav_menu('cart-menu',__( 'Cart Menu' ));
+  register_nav_menu('account-menu',__( 'Account Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 ?>
