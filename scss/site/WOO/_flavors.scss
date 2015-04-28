@@ -1,0 +1,70 @@
+/* FLAVORS */
+table.variations {
+  background: transparent;
+  border: none;
+  
+  td.label {
+	  background: transparent;
+	  padding: 0px;
+	  label {
+		  font-size: 14px;
+		  }
+	  }
+  td.value {
+  display: inline-block;
+  line-height: 0;
+  }
+  
+}
+.swatchinput {
+  position: relative;
+  padding-right: 0px !important;
+  margin: 0 0 0 0;
+  &:hover, &.flavor-active{
+	  span.belowtext {
+	  display:block;
+	  }
+  }
+  span.belowtext {
+  	position: absolute;
+	  bottom: -100px;
+	  width: 100px;
+	  height: 100px;
+	  line-height: 1.5;
+	  font-size: 12px;
+	  text-align: left;
+	  display: none;
+  	}
+}
+label.wcvaswatchlabel.wcvaround {
+  width: 20px;
+  margin: 0;
+  height: 20px;
+}
+
+.reset_variations{
+	  display: none !important;
+  }
+@media #{$small-only} {
+	h1.product_title.entry-title {
+		font-size: 24px;
+		text-align: center;
+		margin-top: -20px;
+		}
+	td.label {
+		text-align: center;
+			width: 100%;
+		label{
+			
+  			font-weight: bolder;
+		}
+	}
+	.swatchinput{
+		margin-bottom: 25px;
+	}
+	
+	label.wcvaswatchlabel.wcvaround {
+	  width: 50px !important;
+	  height: 50px !important;
+	}
+}

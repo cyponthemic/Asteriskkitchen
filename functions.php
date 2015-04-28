@@ -3,7 +3,7 @@
 Author: Ole Fredrik Lie
 URL: http://olefredrik.com
 */
-
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
 // Various clean up functions
 require_once('library/cleanup.php');
@@ -73,5 +73,42 @@ function baw_theme_setup() {
   add_image_size( 'medium-slider', 1025, 768 ); // 1025 pixels wide (and unlimited height)
   add_image_size( 'large-slider', 1441, 800 ); // 1441 pixels wide (and unlimited height)
 }
+add_theme_support( 'post-thumbnails', array( 'post', 'page', 'movie', 'product' ) );
 
+function woocommerce_category_image() {
+    if ( is_product_category() ){
+	    global $wp_query;
+	    $cat = $wp_query->get_queried_object();
+	    $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+	    $image = wp_get_attachment_url( $thumbnail_id );
+	    if ( $image ) {
+		    echo '<img class="cat-thumbnail" src="' . $image . '" alt="" />';
+		}
+	}
+}
+function woocommerce_category_image_p() {
+    
+    
+	    $idproduct = get_the_ID();
+	    
+	    global $post;
+		$terms = get_the_terms( $post->ID, 'product_cat' );
+		foreach ($terms as $term) {
+			$product_cat_id = $term->term_id;
+			
+		break;
+}
+$thumbnail_id = get_woocommerce_term_meta( $product_cat_id, 'thumbnail_id', true );
+$category_link = get_category_link( $product_cat_id );
+			echo $category_link;	
+$image = wp_get_attachment_url( $thumbnail_id );
+if ( $image ) {
+		    echo '<a href="'.$_SERVER['HTTP_REFERER'].'"> <img class="cat-thumbnail" src="' . $image . '" alt="" /></a>';
+		}
+}
+function register_my_menu() {
+  register_nav_menu('cart-menu',__( 'Cart Menu' ));
+  register_nav_menu('account-menu',__( 'Account Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 ?>

@@ -1,0 +1,30 @@
+/* WOO MESSAGE */
+.woocommerce-message {
+  position: absolute;
+  z-index: 1000000;
+  width: 50%;
+  display: block;
+  margin: 0px 25%;
+  padding: 50px;
+  padding-bottom: 75px;
+  background: white;
+    box-shadow: 8px 10px 9px rgba(0,0,0,0.5);
+}
+button.close-message {
+   position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 10px 15px;
+  background: transparent;
+  color: black;
+}
+.woocommerce-message a.button.wc-forward{
+  position: absolute;
+  right: 35%;
+  width: 30%;
+  bottom: 10px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+

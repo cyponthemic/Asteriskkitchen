@@ -55,5 +55,11 @@
 	
 
 <section class="container" role="document">
-	<?php get_template_part('parts/top-bar'); ?>
+	<?php 
+	if (is_woocommerce() or is_cart() or is_account_page() or is_checkout()):
+	get_template_part('parts/top-bar-commerce');
+	else:
+	get_template_part('parts/top-bar'); 
+	endif;
+	 ?>
 	<?php do_action('foundationPress_after_header'); ?>
