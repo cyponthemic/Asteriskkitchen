@@ -86,7 +86,26 @@ function woocommerce_category_image() {
 		}
 	}
 }
-
+function woocommerce_category_image_p() {
+    
+    
+	    $idproduct = get_the_ID();
+	    
+	    global $post;
+		$terms = get_the_terms( $post->ID, 'product_cat' );
+		foreach ($terms as $term) {
+			$product_cat_id = $term->term_id;
+			
+		break;
+}
+$thumbnail_id = get_woocommerce_term_meta( $product_cat_id, 'thumbnail_id', true );
+$category_link = get_category_link( $product_cat_id );
+			echo $category_link;	
+$image = wp_get_attachment_url( $thumbnail_id );
+if ( $image ) {
+		    echo '<a href="'.$_SERVER['HTTP_REFERER'].'"> <img class="cat-thumbnail" src="' . $image . '" alt="" /></a>';
+		}
+}
 function register_my_menu() {
   register_nav_menu('cart-menu',__( 'Cart Menu' ));
   register_nav_menu('account-menu',__( 'Account Menu' ));

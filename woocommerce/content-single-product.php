@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="row title">
 	<h1 class="page-title">
-		Boutique
+		<?php woocommerce_category_image_p()?>
 		<?php wp_nav_menu( array( 'theme_location' => 'cart-menu' ) ); ?>
 	</h1>
 	

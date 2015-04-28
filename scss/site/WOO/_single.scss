@@ -9,7 +9,14 @@ h1.product_title.entry-title {
 div#jckWooThumbs_img_wrap {
   width: 100%;
 }
+div#jckWooThumbs_img_wrap .rsThumbs {
+  opacity: 0;
+}
 
+
+div#jckWooThumbs_img_wrap:hover .rsThumbs {
+  opacity: 1;
+}
 .rsNavItem{
 	background: transparent !important;
 	img{
